@@ -2,9 +2,11 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "esnext",
     "target": "es5",
-    "allowJs": true
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "jsx": "react"
   },
   "files": ["src/index.ts"]
 }

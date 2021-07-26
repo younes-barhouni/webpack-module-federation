@@ -28,8 +28,11 @@ const config = {
     rules: [
       {
         test: /\.(ts|tsx)$/i,
-        loader: "ts-loader",
-        exclude: ["/node_modules/"],
+        loader: "babel-loader",
+        exclude: /node_modules/,
+        options: {
+          presets: ["@babel/preset-react"],
+        },
       },
       {
         test: /\.css$/i,
