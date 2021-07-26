@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Input from "./Input";
 
 const App = () => (
   <div>
-    <h1> 🚀 Hello world!</h1>
+    <h1> 🚀 magic input!</h1>
+    <Input />
   </div>
 );
 
