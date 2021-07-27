@@ -14,7 +14,7 @@ const config = {
     open: true,
     host: "localhost",
     contentBase: path.join(__dirname, "dist"),
-    port: 3002,
+    port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({
