@@ -8,5 +8,5 @@
     "moduleResolution": "Node",
     "jsx": "react"
   },
-  "files": ["inputFactory/src/index.ts"]
+  "files": ["src/index.ts"]
 }
