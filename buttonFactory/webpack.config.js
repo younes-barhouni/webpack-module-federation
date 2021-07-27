@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { ModuleFederationPlugin } = require("webpack").container;
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -20,9 +21,15 @@ const config = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
-
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    new ModuleFederationPlugin({
+      name: "buttonFactory",
+      library: { type: "var", name: "buttonFactory" },
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Button": "./src/Button",
+      },
+      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
+    }),
   ],
   module: {
     rules: [
